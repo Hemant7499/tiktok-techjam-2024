@@ -43,7 +43,8 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
 
     const hasUserFollowed = async () => {
         if (!contextUser) return
-        let res = await useIsFollowed(contextUser?.user?.id, post?.profile?.user_id)
+        let id = contextUser?.user?.id;
+        let res = await useIsFollowed(id ? id : "", post?.profile?.user_id)
         if(res.documents.length == 0)
             setUserFollowed(false)
         else{
@@ -113,7 +114,8 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
 
     const follow = async () => {
         setHasClickedFollow(true)
-        await useCreateFollow(contextUser?.user?.id , post?.profile?.user_id)
+        let id = contextUser?.user?.id;
+        await useCreateFollow(id ? id : "" , post?.profile?.user_id)
         hasUserFollowed()
         setHasClickedFollow(false)
     }

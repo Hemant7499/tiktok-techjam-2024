@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
-const ProductDescription = (params) => {
+const ProductDescription = (params : any) => {
   return (
     <Card>
       <CardContent>
