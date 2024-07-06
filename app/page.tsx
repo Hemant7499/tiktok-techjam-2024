@@ -10,16 +10,16 @@ import { PostWithProfile } from "./types"
 export default function Home() {
   let { allPosts, setAllPosts } = useForYouStore();
   let limit : number = 5;
-  let offset : number = 0;
+  let offset_unit : number = 0;
   useEffect(() => { 
     allPosts = [];
-    setAllPosts(limit, offset, allPosts)
+    setAllPosts(limit, offset_unit, allPosts)
   }, [])
 
   const fivePostsScrolled = (num: any) => {
     console.log("Received " + allPosts.length + " posts previously");
-    if (num === allPosts.length) {
-      setAllPosts(limit, allPosts.length, allPosts);
+    if (num === allPosts.length*5/6) {
+      setAllPosts(limit, allPosts.length*5/6, allPosts);
     }
   };
 
