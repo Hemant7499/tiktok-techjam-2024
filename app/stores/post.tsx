@@ -16,7 +16,7 @@ interface PostStore {
 
 interface ForYouPostStore {
     allPosts: PostWithProfile[];
-    setAllPosts: (limit : number, offset : number) => void;
+    setAllPosts: (limit : number, offset : number, allPosts: PostWithProfile[]) => void;
 }
 
 
@@ -54,12 +54,11 @@ export const useForYouStore = create<ForYouPostStore>()(
         persist(
             (set) => ({
                 allPosts: [],
-                setAllPosts: async (limit : number, offset : number) => {
+                setAllPosts: async (limit : number, offset : number, postList: PostWithProfile[]) => {
                     const result = await useGetAllPosts(limit, offset)
-                    set((state) => { 
-                        result.concat(state.allPosts);
-                        return {allPosts : result}; 
-                    });
+                    result.forEach( pos => postList.push(pos))
+                    console.log("Retrieved " + result.length + " posts")
+                    set({ allPosts: postList })
                 }
             }),
             { 

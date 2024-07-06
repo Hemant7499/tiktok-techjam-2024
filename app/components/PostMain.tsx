@@ -11,7 +11,9 @@ import ClientOnly from "./ClientOnly"
 import { BiChevronLeft } from "react-icons/bi";
 import React from "react";
 
-export default function PostMain({ post, ordKey }: PostMainCompTypes) {
+export default function PostMain({ post, ordKey, callbackAfterScroll }: PostMainCompTypes) {
+
+    let start : boolean = false;
 
     useEffect(() => {
         const video = document.getElementById(`video-${post?.id}`) as HTMLVideoElement;
@@ -21,9 +23,15 @@ export default function PostMain({ post, ordKey }: PostMainCompTypes) {
             let observer = new IntersectionObserver((entries) => {
                 entries[0].isIntersecting ? video?.play() : video?.pause();
                 
-                if (ordKey !== undefined && ordKey % 5 == 0) {
-                    console.log(ordKey);
+                if (!start) {
+                    start = true;
+                } else if (ordKey !== undefined && ordKey % 5 == 0) {
+                    console.log("Scrolled to " + ordKey + " Posts");
+                    callbackAfterScroll(ordKey);
+                    start = false;
                 }
+                
+
             }, { threshold: [0.6] });
         
             observer.observe(postMainElement);

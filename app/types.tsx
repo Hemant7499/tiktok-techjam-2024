@@ -141,6 +141,7 @@ export interface PostUserCompTypes {
 export interface PostMainCompTypes {
     post: PostWithProfile
     ordKey: number
+    callbackAfterScroll: (num : number) => void;
 }
 
 export interface PostMainLikesCompTypes {
