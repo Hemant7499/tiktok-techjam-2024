@@ -146,7 +146,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
         <>
             <div id={`PostMainLikes-${post?.id}`} className="relative mr-[75px]">
                 <div className="absolute bottom-0 pl-2">
-                    <div className="pb-4 text-center">
+                    <div className="pb-8 text-center">
                         <button 
                             disabled={hasClickedFollow}
                             onClick={() => followOrUnfollow()} 
@@ -162,7 +162,6 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                                 </div>
                             )}
                         </button>
-                        
                     </div>
                     <div className="pb-4 text-center">
                         <button 
@@ -177,7 +176,7 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                             )}
                             
                         </button>
-                        <span className="text-xs text-gray-800 font-semibold">
+                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">
                             {likes?.length}
                         </span>
                     </div>
@@ -189,14 +188,14 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                             <FaCommentDots size="25"/>
                         </div>
-                        <span className="text-xs text-gray-800 font-semibold">{comments?.length}</span>
+                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">{comments?.length}</span>
                     </button>
 
                     <button className="text-center">
                         <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
                             <FaShare size="25"/>
                         </div>
-                        <span className="text-xs text-gray-800 font-semibold">55</span>
+                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">55</span>
                     </button>
                 </div>
             </div>

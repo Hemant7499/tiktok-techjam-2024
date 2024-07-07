@@ -99,11 +99,11 @@ export default function Post({ params }: PostPageTypes) {
                     </Link>
 
 
-                    {/* <img 
+                    <img 
                         className="absolute z-20 top-[18px] left-[70px] rounded-full lg:mx-0 mx-auto" 
                         width="45" 
                         src="/images/tiktok-logo-small.png"
-                    /> */}
+                    />
 
                     <ClientOnly>
                         {postById?.video_url ? (
@@ -132,7 +132,7 @@ export default function Post({ params }: PostPageTypes) {
 
                 </div>
 
-                {/* <div id="InfoSection" className="lg:max-w-[550px] relative w-full h-full bg-white">
+                <div id="InfoSection" className="lg:max-w-[550px] relative w-full h-full bg-white">
                     <div className="py-7" />
 
                         <ClientOnly>
@@ -142,7 +142,7 @@ export default function Post({ params }: PostPageTypes) {
                         </ClientOnly>
                         <Comments params={params}/>
 
-                </div> */}
+                </div>
             </div>
         </>
     )
