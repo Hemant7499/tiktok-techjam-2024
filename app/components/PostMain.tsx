@@ -53,7 +53,7 @@ export default function PostMain({ post, ordKey, callbackAfterScroll }: PostMain
             <div id={`PostMain-${post.id}`} className="flex border-b relative">
                 <div 
                     id="PostPage" 
-                    className="lg:flex justify-between w-full h-85vh bg-black overflow-auto"
+                    className="lg:flex justify-between w-full h-screen bg-black overflow-auto"
                 >
                     <div className="lg:w-[calc(100%-540px)] h-full relative">
                         {/* <Link

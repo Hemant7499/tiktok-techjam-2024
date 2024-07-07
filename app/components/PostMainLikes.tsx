@@ -144,17 +144,17 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
 
     return (
         <>
-            <div id={`PostMainLikes-${post?.id}`} className="relative mr-[75px]">
+            <div id={`PostMainLikes-${post?.id}`} className="relative mr-[50px]">
                 <div className="absolute bottom-0 pl-2">
                     <div className="pb-8 text-center">
                         <button 
                             disabled={hasClickedFollow}
                             onClick={() => followOrUnfollow()} 
-                            className="rounded-full bg-gray-200 p-2 cursor-pointer"
+                            className="rounded-full bg-gray-200/50 p-2 cursor-pointer"
                         >
                             {!userFollowed ? (
                                 <div className="cursor-pointer">
-                                    <FaPlus color='#ff2626' size="25"/>
+                                    <FaPlus color='#ff2626' size="15"/>
                                 </div>
                             ) : (
                                 <div className="cursor-pointer">
@@ -167,16 +167,16 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         <button 
                             disabled={hasClickedLike}
                             onClick={() => likeOrUnlike()} 
-                            className="rounded-full bg-gray-200 p-2 cursor-pointer"
+                            className="rounded-full bg-gray-200/50 p-2 cursor-pointer"
                         >
                             {!hasClickedLike ? (
-                                <AiFillHeart color={likes?.length > 0 && userLiked ? '#ff2626' : ''} size="25"/>
+                                <AiFillHeart color={likes?.length > 0 && userLiked ? '#ff2626' : ''} size="15"/>
                             ) : (
-                                <BiLoaderCircle className="animate-spin" size="25"/>
+                                <BiLoaderCircle className="animate-spin" size="15"/>
                             )}
                             
                         </button>
-                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">
+                        <span className="rounded-full bg-gray-200/50 p-1 cursor-pointer">
                             {likes?.length}
                         </span>
                     </div>
@@ -185,17 +185,17 @@ export default function PostMainLikes({ post }: PostMainLikesCompTypes) {
                         // onClick={() => router.push(`/post/${post?.id}/${post?.profile?.user_id}`)} 
                         className="pb-4 text-center"
                     >
-                        <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
-                            <FaCommentDots size="25"/>
+                        <div className="rounded-full bg-gray-200/50 p-2 cursor-pointer">
+                            <FaCommentDots size="15"/>
                         </div>
-                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">{comments?.length}</span>
+                        <span className="rounded-full bg-gray-200/50 p-1 cursor-pointer">{comments?.length}</span>
                     </button>
 
                     <button className="text-center">
-                        <div className="rounded-full bg-gray-200 p-2 cursor-pointer">
-                            <FaShare size="25"/>
+                        <div className="rounded-full bg-gray-200/50 p-2 cursor-pointer">
+                            <FaShare size="15"/>
                         </div>
-                        <span className="rounded-full bg-gray-200 p-1 cursor-pointer">55</span>
+                        <span className="rounded-full bg-gray-200/50 p-1 cursor-pointer">55</span>
                     </button>
                 </div>
             </div>
