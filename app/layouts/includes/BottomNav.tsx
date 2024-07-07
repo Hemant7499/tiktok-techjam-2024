@@ -49,7 +49,7 @@ export default function BottomNav() {
 
     return (
         <>
-            <div id="BottomNav" className="fixed bg-white z-30 flex items-center w-full border-t h-[60px] bottom-0">
+            <div id="BottomNav" className="fixed bg-white z-30 flex items-center w-full border-t h-[50px] bottom-0">
                 <div className={`flex items-center justify-between gap-6 w-full px-4 mx-auto max-w-[1150px]`}>
                     <MenuItem iconString="For You" colorString="#F02C56" sizeString="25"/>
                     <MenuItem iconString="Following" colorString="#000000" sizeString="25" />

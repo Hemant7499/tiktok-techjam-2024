@@ -20,7 +20,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     return (
       	<>
 			<TopNav/>
-			<div className={`justify-between mx-auto w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}
+			<div className={`justify-between mx-auto py-[50px] w-full lg:px-2.5 px-0 ${pathname == '/' ? 'max-w-[1140px]' : ''}`}
 				onScrollCapture={handleScroll}
 			>
 			{/* <div> */}
