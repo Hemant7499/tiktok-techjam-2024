@@ -57,7 +57,7 @@ export const useForYouStore = create<ForYouPostStore>()(
                 setAllPosts: async (limit : number, offset : number, postList: PostWithProfile[]) => {
                     const result = await useGetAllPosts(limit, offset)
                     result.forEach( pos => postList.push(pos))
-                    console.log("Retrieved " + result.length + " posts")
+                    console.log("Retrieved " + result.length + " new posts")
                     if (result.length == limit){
                         let adv : PostWithProfile = {
                             "id": "66830e611dd472b91492",

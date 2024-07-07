@@ -5,7 +5,6 @@ import MainLayout from "./layouts/MainLayout"
 import { useForYouStore } from "@/app/stores/post"
 import ClientOnly from "./components/ClientOnly"
 import PostMain from "./components/PostMain"
-import { PostWithProfile } from "./types"
 
 export default function Home() {
   let { allPosts, setAllPosts } = useForYouStore();
