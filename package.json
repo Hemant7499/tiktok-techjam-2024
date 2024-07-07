@@ -17,7 +17,9 @@
     "@types/react-dom": "18.2.7",
     "appwrite": "^11.0.1",
     "autoprefixer": "10.4.15",
+    "axios": "^1.7.2",
     "debounce": "^1.2.1",
+    "gsap": "^3.12.5",
     "image-js": "^0.35.4",
     "moment": "^2.29.4",
     "neo4j-driver": "^5.22.0",
@@ -27,6 +29,7 @@
     "react-advanced-cropper": "^0.19.3",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-swipeable": "^7.0.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6",
     "zustand": "^4.4.1"

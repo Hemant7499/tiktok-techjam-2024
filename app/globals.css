@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+  .swiper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68vw;
+    background: #222;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .swipe-btn {
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+  }
+  
+  .swipe-btn.back-to-start {
+    transform: translateX(0) !important;
+  }
+  
+  .swipe-btn .circle {
+    fill: #000000;
+  }
+  
+  .swipe-btn .arrow {
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    fill: rgb(255, 75, 123);
+  }
+  
+  .swipe-end {
+    fill-rule: evenodd;
+    stroke: rgb(255, 75, 123);
+    stroke-width: 2px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    fill: none;
+  }
+  
+  .dotted-line circle {
+    fill: #ffffff;
+  }
+  
+  .unlock {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+  }
+  
+  .unlock.unlocked {
+    opacity: 1;
+  }
+  

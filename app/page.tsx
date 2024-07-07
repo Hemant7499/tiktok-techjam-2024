@@ -1,11 +1,13 @@
 "use client"
 
-import { useEffect } from "react"
+import { useUser } from "./context/user"
+import { useEffect, useState } from "react"
 import MainLayout from "./layouts/MainLayout"
 import { useForYouStore } from "@/app/stores/post"
 import ClientOnly from "./components/ClientOnly"
 import PostMain from "./components/PostMain"
 import { PostWithProfile } from "./types"
+import axios from 'axios';
 
 export default function Home() {
   let { allPosts, setAllPosts } = useForYouStore();
@@ -18,10 +20,11 @@ export default function Home() {
 
   const fivePostsScrolled = (num: any) => {
     console.log("Received " + allPosts.length + " posts previously");
-    if (num === allPosts.length*5/6) {
-      setAllPosts(limit, allPosts.length*5/6, allPosts);
+    if (num === allPosts.length*limit/(limit+1)) {
+      setAllPosts(limit, allPosts.length*limit/(limit+1), allPosts);
     }
   };
+
 
   return (
     <>

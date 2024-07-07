@@ -10,6 +10,7 @@ import { PostMainCompTypes } from "../types";
 import ClientOnly from "./ClientOnly"
 import { BiChevronLeft } from "react-icons/bi";
 import React from "react";
+import AdCard from "./AdCard";
 
 export default function PostMain({ post, ordKey, callbackAfterScroll }: PostMainCompTypes) {
 
@@ -71,16 +72,22 @@ export default function PostMain({ post, ordKey, callbackAfterScroll }: PostMain
                                             autoPlay
                                             loop
                                             muted
-                                            className="h-screen mx-auto" 
+                                            className="h-85vh mx-auto" 
                                             src={useCreateBucketUrl(post.video_url)}
                                             onClick={muteUnmute}
                                             // onTouchMove={(event) => handleTouchMove(event)}
                                             // onTouchStart={(event) => handleTouchStart(event)}
                                             // onTouchEnd={(event) => handleTouchEnd(event)}
                                         />
+                                        { !post?.is_ad ? (
                                         <div className="absolute bottom-5 right-5">
                                             <PostMainLikes post={post}/>
-                                        </div>
+                                        </div>) : 
+                                        (
+                                         <div className="bottom-22 relative">
+                                            <AdCard post={post}/>
+                                        </div>)
+                                        }
                                     </div>
                                 ) : null}
                             </div>

@@ -58,7 +58,22 @@ export const useForYouStore = create<ForYouPostStore>()(
                     const result = await useGetAllPosts(limit, offset)
                     result.forEach( pos => postList.push(pos))
                     console.log("Retrieved " + result.length + " posts")
+                    console.log()
                     if (result.length == limit){
+                        // call the flask api by passing profile user id
+                        // get the ad id from api
+                        // const contextUser = useUser()
+                        // let adv = null
+                        //   useEffect(() => {
+                        //       axios.get(`http://localhost:5000/api/data?userId=${contextUser?.user?.id}`)
+                        //           .then(response => {
+                        //             adv = response.data
+                        //           })
+                        //           .catch(error => {
+                        //               console.error('There was an error fetching the data!', error);
+                        //           });
+                        //   }, []);
+                        // postList.push(adv)
                         let adv : PostWithProfile = {
                             "id": "66830e611dd472b91492",
                             "user_id": "668307b2a7c8064553ac",
@@ -69,7 +84,9 @@ export const useForYouStore = create<ForYouPostStore>()(
                                 "user_id": "668307b2a7c8064553ac",
                                 "name": "Zorro",
                                 "image": "667e1ed6001b0c4e53a6"
-                            }
+                            },
+                            "is_ad": true,
+                            "product_id": "1"
                         }
                         postList.push(adv)
                     }

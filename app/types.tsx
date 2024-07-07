@@ -63,7 +63,9 @@ export interface PostWithProfile {
         user_id: string;
         name: string;
         image: string;
-    }
+    };
+    is_ad: boolean;
+    product_id: string
 }
 
 export interface CommentWithProfile {
@@ -107,6 +109,7 @@ export interface Product {
     description: string,
     
 }
+
 
 //////////////////////////////////////////////
 //////////////////////////////////////////////
