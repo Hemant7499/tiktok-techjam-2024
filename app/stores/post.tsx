@@ -58,7 +58,6 @@ export const useForYouStore = create<ForYouPostStore>()(
                     const result = await useGetAllPosts(limit, offset)
                     result.forEach( pos => postList.push(pos))
                     console.log("Retrieved " + result.length + " posts")
-                    console.log()
                     if (result.length == limit){
                         // call the flask api by passing profile user id
                         // get the ad id from api
