@@ -271,8 +271,8 @@ CORS(app, resources={r"/*": {"origin": "http://localhost:3000"}})
 
 # Neo4j connection details
 uri = "bolt://localhost:7687"
-username = "neo4j"
-password = "12345678"
+username = ""
+password = ""
 
 # Create a Neo4j driver instance
 driver = GraphDatabase.driver(uri, auth=(username, password))
