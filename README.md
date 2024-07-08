@@ -14,20 +14,22 @@ Our tailored discovery system is a two part AI service, where
 2. **`GenAI`** helps sellers to choose an influencer whose digital footprints are utilized to generate a personalized ad video, in a controlled manner.
 ***
 
-### App Setup (localhost)
+### AppWrite Schema
+Checkout **[this](Appwrite_Schema.pdf)** schema diagram.
+Database Name: tiktok-clone
+
+### App Setup 
 
 ```
 git clone https://github.com/Hemant7499/tiktok-techjam-2024
 ```
 
-Setup an Appwrite account and 
-
-### AppWrite Schema
-Checkout **[this](Appwrite_Schema.pdf)** schema diagram.
-Database Name: tiktok-clone
+1. Setup an Appwrite account
+2. rename .env.example to .env
+3. Fill out credentials from Appwrite
 
 ### Running the react front-end
-Run the commands.
+Run the following commands.
     
 ```
 npm i
