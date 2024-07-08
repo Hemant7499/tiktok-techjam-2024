@@ -1,4 +1,5 @@
 # Tiktok-techjam-2024
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y_lUgQu1OBg?si=XP-C9hVNg9B5JBpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Inspiration
 Most social-media platforms support product endorsement by displaying advertisements on behalf of certified sellers. These advertisements lack target-audience knowledge and have limited area of creativity for the sellers. Such generic ads have a low probability of reaching the right audience.
