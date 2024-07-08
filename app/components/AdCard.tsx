@@ -55,17 +55,17 @@ function AdCard({ post }: { post: PostMainCompTypes['post'] }) {
         setEndX(0);
       }
     };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('touchmove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('touchend', handleMouseUp);
+    let adcard = document.getElementById(`ad-${post?.id}`);
+    adcard?.addEventListener('mousemove', handleMouseMove);
+    adcard?.addEventListener('touchmove', handleMouseMove);
+    adcard?.addEventListener('mouseup', handleMouseUp);
+    adcard?.addEventListener('touchend', handleMouseUp);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('touchmove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchend', handleMouseUp);
+      adcard?.removeEventListener('mousemove', handleMouseMove);
+      adcard?.removeEventListener('touchmove', handleMouseMove);
+      adcard?.removeEventListener('mouseup', handleMouseUp);
+      adcard?.removeEventListener('touchend', handleMouseUp);
     };
   }, [swiperDragged, startX, endX]);
 
@@ -78,7 +78,7 @@ function AdCard({ post }: { post: PostMainCompTypes['post'] }) {
   };
 
   return (
-    <div className="swiper">
+    <div id={`ad-${post?.id}`} className="swiper">
       <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="260px" height="45px">
         <g id="dotted-line" className="dotted-line">
           <circle cx="40" cy="22" r="3"></circle>

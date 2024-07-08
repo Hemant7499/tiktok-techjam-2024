@@ -51,7 +51,7 @@ export default function PostMain({ post, ordKey, callbackAfterScroll }: PostMain
 
     return (
         <>
-            <div id={`PostMain-${post.id}`} className="flex border-b relative">
+            <div id={`PostMain-${post?.id}`} className="flex border-b relative">
                 <div 
                     id="PostPage" 
                     className="lg:flex justify-between w-full h-screen bg-black overflow-auto"

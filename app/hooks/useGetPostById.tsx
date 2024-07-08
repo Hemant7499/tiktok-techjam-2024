@@ -21,7 +21,9 @@ const useGetPostById = async (id: string) => {
                 user_id: profile?.user_id,  
                 name: profile?.name,
                 image: profile?.image,
-            }
+            },
+            is_ad: false,
+            product_id: "",
         } 
     } catch (error) {
         throw error

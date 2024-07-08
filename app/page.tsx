@@ -11,17 +11,19 @@ import axios from 'axios';
 
 export default function Home() {
   let { allPosts, setAllPosts } = useForYouStore();
+  let contextUser = useUser();
   let limit : number = 5;
   let offset_unit : number = 0;
-  useEffect(() => { 
-    allPosts = [];
-    setAllPosts(limit, offset_unit, allPosts)
+  let userNotSet : boolean = true;
+  useEffect(() => {
+      allPosts = [];
+      setAllPosts(limit, offset_unit, allPosts, contextUser?.user?.id);
   }, [])
 
   const fivePostsScrolled = (num: any) => {
     console.log("Received " + allPosts.length + " posts previously");
-    if (num === allPosts.length*limit/(limit+1)) {
-      setAllPosts(limit, allPosts.length*limit/(limit+1), allPosts);
+    if (num === allPosts.length*limit/(limit+1)){
+      setAllPosts(limit, allPosts.length*limit/(limit+1), allPosts, contextUser?.user?.id);
     }
   };
 

@@ -18,6 +18,7 @@
     "appwrite": "^11.0.1",
     "autoprefixer": "10.4.15",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
     "debounce": "^1.2.1",
     "gsap": "^3.12.5",
     "image-js": "^0.35.4",
