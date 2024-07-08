@@ -51,14 +51,6 @@ def generate_modified_description(user_interactions, api_key):
   response = ""
   return response.choices[0].message.content
 
-def get_text(user_prompt):
-  api_key = "sk-proj-X7whjOrq2UdO3NJqNKMDT3BlbkFJKzh0kcyfuqhsRwWHxGmF"
-  modified_description = generate_modified_description(user_interactions, api_key)
-  if modified_description:
-    print("Modified Product Description:")
-    print(modified_description)
-
-d
 
 # Commented out IPython magic to ensure Python compatibility.
 def setup_pipeline():
@@ -255,18 +247,6 @@ def run_cypher_query(query, userId):
 @cross_origin(supports_credentials=True)
 def home():
     return "Welcome to the Flask API with Neo4j!"
-
-
-# @app.route('/query', methods=['GET', 'POST', 'OPTIONS'])
-# def query():
-#     if request.method == 'OPTIONS':
-#         response = app.make_default_options_response()
-#         response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
-#         response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
-#         return response
-    
-#     # Handle GET and POST requests here
-#     return 'Query endpoint'
 
 
 @app.route('/query', methods=['POST', 'OPTIONS'])
